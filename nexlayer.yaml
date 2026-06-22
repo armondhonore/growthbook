@@ -2,7 +2,7 @@ application:
   name: growthbook
   pods:
   - name: app
-    image: growthbook/growthbook:latest
+    image: mirror.gcr.io/growthbook/growthbook:latest
     path: /
     servicePorts:
     - 3000
@@ -17,7 +17,7 @@ application:
       mountPath: /usr/local/src/app/packages/back-end/uploads
       size: 5Gi
   - name: mongo
-    image: mongo:5
+    image: mirror.gcr.io/library/mongo:5
     servicePorts:
     - 27017
     volumes:
